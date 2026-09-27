@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Thailand Poker Room | เล่นโป๊กเกอร์</title>
+  <meta name="description" content="สัมผัสบรรยากาศโป๊กเกอร์สุดพิเศษ ทัวร์นาเมนต์ทุกวัน โต๊ะเล่นสะดวกสบาย และบรรยากาศสุดเร้าใจ">
+
+  <meta name="theme-color" content="#080b0a">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ห้องโป๊กเกอร์ชั้นนำในประเทศไทย">
+  <meta property="og:description" content="ทัวร์นาเมนต์ทุกวัน โต๊ะเล่นสะดวกสบาย บรรยากาศสุดเร้าใจ">
+  <meta property="og:type" content="website">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+      n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq('init', '1325001549794627');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1325001549794627&ev=PageView&noscript=1"
+      alt=""
+    >
+  </noscript>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+    :root {
+      --bg: #070a09;
+      --bg-soft: #0c110f;
+      --green: #075d43;
+      --green-light: #11a36f;
+      --gold: #d9b56d;
+      --gold-light: #f3dca7;
+      --white: #f8f7f3;
+      --muted: #a9b0ac;
+      --border: rgba(217,181,109,.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(11,100,70,.22), transparent 35%),
+        radial-gradient(circle at 90% 90%, rgba(217,181,109,.06), transparent 30%),
+        #070a09;
+      color: var(--white);
+      font-family: "Noto Sans Thai", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .22;
+      background-image:
+        linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
+      background-size: 55px 55px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    .page {
+      min-height: 100svh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: rgba(255,255,255,.025);
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 22px;
+      box-shadow: inset 0 0 20px rgba(217,181,109,.04);
+    }
+
+    .brand-text {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .nav-line {
+      width: 90px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+      opacity: .6;
+    }
+
+    .hero {
+      width: min(1180px, calc(100% - 40px));
+      flex: 1;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 70px;
+      padding: 40px 0 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1 {
+      max-width: 700px;
+      font-size: clamp(45px, 5.4vw, 78px);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: var(--gold-light);
+    }
+
+    .lead {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 34px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 38px;
+    }
+
+    .feature {
+      min-height: 96px;
+      padding: 22px 16px 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .feature + .feature {
+      border-left: 1px solid rgba(255,255,255,.08);
+      padding-left: 18px;
+    }
+
+    .feature-symbol {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 24px;
+      flex: 0 0 auto;
+    }
+
+    .feature p {
+      color: #dedfdc;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .cta-wrap {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .cta {
+      min-width: 210px;
+      min-height: 60px;
+      padding: 0 28px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      color: #06120d;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 800;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #f0d596, #cda75d);
+      box-shadow:
+        0 12px 40px rgba(217,181,109,.15),
+        inset 0 1px rgba(255,255,255,.5);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+      box-shadow:
+        0 17px 50px rgba(217,181,109,.24),
+        inset 0 1px rgba(255,255,255,.5);
+    }
+
+    .cta-arrow {
+      font-size: 19px;
+      transition: transform .25s ease;
+    }
+
+    .cta:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+
+    .line-note {
+      color: #7f8984;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* VISUAL */
+    .visual {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .visual-glow {
+      width: 430px;
+      height: 430px;
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(9,122,82,.24), rgba(0,0,0,0) 67%);
+      filter: blur(5px);
+    }
+
+    .table {
+      width: min(430px, 90vw);
+      aspect-ratio: 1 / 1.16;
+      position: relative;
+      border-radius: 48% 48% 45% 45%;
+      transform: perspective(900px) rotateX(10deg) rotateZ(5deg);
+      background:
+        radial-gradient(circle at 45% 35%, #126649 0, #084732 42%, #04271d 100%);
+      border: 13px solid #161a18;
+      box-shadow:
+        0 55px 90px rgba(0,0,0,.7),
+        0 0 0 1px rgba(217,181,109,.24),
+        inset 0 0 0 2px rgba(255,255,255,.04),
+        inset 0 0 80px rgba(0,0,0,.4);
+    }
+
+    .table::after {
+      content: "";
+      position: absolute;
+      inset: 30px;
+      border: 1px solid rgba(231,208,155,.18);
+      border-radius: 48%;
+    }
+
+    .card {
+      width: 98px;
+      height: 142px;
+      position: absolute;
+      left: 50%;
+      top: 47%;
+      border-radius: 9px;
+      background: #f3f0e8;
+      box-shadow: 0 18px 35px rgba(0,0,0,.35);
+      color: #171717;
+      padding: 10px;
+      font-family: Georgia, serif;
+      z-index: 3;
+    }
+
+    .card strong {
+      display: block;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .card span {
+      font-size: 23px;
+    }
+
+    .card-one {
+      transform: translate(-82%, -50%) rotate(-8deg);
+    }
+
+    .card-two {
+      transform: translate(-18%, -46%) rotate(9deg);
+      color: #a31d28;
+    }
+
+    .chip {
+      position: absolute;
+      width: 61px;
+      height: 61px;
+      border-radius: 50%;
+      z-index: 4;
+      background: #111;
+      border: 7px dashed #d5b46f;
+      box-shadow:
+        0 9px 16px rgba(0,0,0,.45),
+        inset 0 0 0 3px #252525;
+    }
+
+    .chip::after {
+      content: "♠";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
+      font-family: Georgia, serif;
+      font-size: 18px;
+    }
+
+    .chip-1 {
+      right: 22%;
+      bottom: 20%;
+    }
+
+    .chip-2 {
+      width: 53px;
+      height: 53px;
+      right: 11%;
+      bottom: 28%;
+      transform: rotate(19deg);
+    }
+
+    .chip-3 {
+      width: 47px;
+      height: 47px;
+      left: 18%;
+      top: 20%;
+      transform: rotate(-15deg);
+    }
+
+    .suit {
+      position: absolute;
+      color: rgba(217,181,109,.13);
+      font-family: Georgia, serif;
+      font-size: 70px;
+      user-select: none;
+    }
+
+    .suit-1 {
+      top: 3%;
+      right: -5%;
+      transform: rotate(15deg);
+    }
+
+    .suit-2 {
+      bottom: 0;
+      left: 0;
+      transform: rotate(-13deg);
+    }
+
+    footer {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 22px 0 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #646c68;
+      font-size: 10px;
+      border-top: 1px solid rgba(255,255,255,.06);
+      position: relative;
+      z-index: 3;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-top: 60px;
+      }
+
+      .content {
+        text-align: center;
+      }
+
+      .eyebrow {
+        justify-content: center;
+      }
+
+      .eyebrow::before {
+        display: none;
+      }
+
+      .lead {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-wrap {
+        justify-content: center;
+      }
+
+      .visual {
+        min-height: 480px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        width: calc(100% - 28px);
+        height: 70px;
+      }
+
+      .nav-line {
+        width: 45px;
+      }
+
+      .hero {
+        width: calc(100% - 28px);
+        padding: 40px 0 55px;
+      }
+
+      h1 {
+        font-size: clamp(40px, 12vw, 56px);
+      }
+
+      .lead {
+        font-size: 15px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        justify-content: center;
+        min-height: 68px;
+        padding: 14px;
+      }
+
+      .feature + .feature {
+        border-left: 0;
+        border-top: 1px solid rgba(255,255,255,.07);
+        padding-left: 14px;
+      }
+
+      .cta {
+        width: 100%;
+      }
+
+      .line-note {
+        width: 100%;
+      }
+
+      .visual {
+        min-height: 430px;
+      }
+
+      .table {
+        width: 330px;
+      }
+
+      .card {
+        width: 76px;
+        height: 112px;
+      }
+
+      footer {
+        width: calc(100% - 28px);
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <nav class="nav">
+      <a href="#" class="brand" aria-label="Poker Club">
+        <div class="brand-mark">♠</div>
+        <div class="brand-text">Poker Club</div>
+      </a>
+
+      <div class="nav-line"></div>
+    </nav>
+
+    <section class="hero">
+
+      <div class="content">
+
+        <div class="eyebrow">
+          Premium Poker Experience
+        </div>
+
+        <h1>
+          ห้องโป๊กเกอร์<br>
+          <span>ชั้นนำในประเทศไทย</span>
+        </h1>
+
+        <p class="lead">
+          สัมผัสประสบการณ์โป๊กเกอร์ในบรรยากาศระดับพรีเมียม
+          พร้อมการแข่งขันที่น่าตื่นเต้นและโต๊ะที่ออกแบบมาเพื่อความสะดวกสบาย
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+            <div class="feature-symbol">♠</div>
+            <p>มีทัวร์นาเมนต์<br>ทุกวัน</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-symbol">♣</div>
+            <p>โต๊ะเล่น<br>สะดวกสบาย</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-symbol">♦</div>
+            <p>บรรยากาศ<br>สุดเร้าใจ</p>
+          </div>
+
+        </div>
+
+        <div class="cta-wrap">
+
+          <a
+            href="https://lin.ee/xc1NBFA"
+            class="cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            id="line-cta"
+          >
+            <span>เล่นเลย</span>
+            <span class="cta-arrow">→</span>
+          </a>
+
+          <div class="line-note">
+            ติดต่อเราผ่าน LINE<br>
+            เพื่อดูรายละเอียดเพิ่มเติม
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="visual" aria-hidden="true">
+
+        <div class="visual-glow"></div>
+
+        <div class="suit suit-1">♠</div>
+        <div class="suit suit-2">♣</div>
+
+        <div class="table">
+
+          <div class="card card-one">
+            <strong>A</strong>
+            <span>♠</span>
+          </div>
+
+          <div class="card card-two">
+            <strong>K</strong>
+            <span>♥</span>
+          </div>
+
+          <div class="chip chip-1"></div>
+          <div class="chip chip-2"></div>
+          <div class="chip chip-3"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer>
+      <span>สำหรับผู้ที่มีอายุ 18 ปีขึ้นไปเท่านั้น</span>
+      <span>กรุณาตรวจสอบกฎหมายและข้อบังคับที่เกี่ยวข้องในพื้นที่ของคุณ</span>
+    </footer>
+
+  </main>
+
+  <script>
+    // Track LINE CTA clicks in Meta Pixel
+    document
+      .getElementById('line-cta')
+      .addEventListener('click', function () {
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'LineContactClick');
+        }
+      });
+  </script>
+
+</body>
+</html>
